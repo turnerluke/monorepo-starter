@@ -1,0 +1,25 @@
+[project]
+name = "monorepo-starter"
+version = "0.1.0"
+description = "A Python monorepo template, batteries-included."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Turner Luke", email = "turnermluke@gmail.com" }]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/turnerluke/monorepo-starter"
+Issues = "https://github.com/turnerluke/monorepo-starter/issues"
+
+[dependency-groups]
+dev = ["interrogate>=1.7.0", "pre-commit>=4.6.0", "pytest>=8.3.5", "pytest-cov>=6.0.0", "ruff>=0.15.12"]
+
+[tool.uv.workspace]
+members = []
+
+[tool.pytest.ini_options]
+minversion = "8.3"
+testpaths = ["tests"]
+addopts = ["--strict-markers", "--tb=short", "-v"]
