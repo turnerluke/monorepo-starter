@@ -1,0 +1,3 @@
+# Generated lockfile — owned by uv, which writes its own TOML formatting.
+# Letting Prettier reformat it fights uv on every `uv lock` run.
+uv.lock
